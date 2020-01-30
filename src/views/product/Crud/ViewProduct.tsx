@@ -6,7 +6,7 @@ import { selectProduct } from "../../../actions/ProductActions";
 import { NavLink, useParams } from "react-router-dom";
 import "./Product.css"
 
-// Register all props of component here
+// Register all params of component here
 interface IParams {
    id: string
 }

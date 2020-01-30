@@ -10,7 +10,7 @@ const CreateProduct = () => {
     const [productName, setProductName] = React.useState('');
     // Handle state for Quantity
     const [quantity, setQuantity] = React.useState(0);
-    // Handle state for city
+    // Handle state for price
     const [price, setPrice] = React.useState(0);
     // Handle state for description
     const [description, setDescription] = React.useState('');
