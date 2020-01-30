@@ -70,12 +70,12 @@ const ListProduct = (props: IProductListProps) => {
                 {
                     props.productList.map((product: IProduct, index: number) => {
                         return (
-                            <tr key={ index }>
-                                <td>{ product.id }</td>
-                                <td>{ product.productName }</td>
-                                <td>{ product.description }</td>
-                                <td>{ product.quantity }</td>
-                                <td>{ product.price }</td>
+                            <tr key={index}>
+                                <td>{product.id}</td>
+                                <td>{product.productName}</td>
+                                <td>{product.description}</td>
+                                <td>{product.quantity}</td>
+                                <td>{product.price}</td>
                                 <td>
                                     <button onClick={() => onEdit(product.id)}>Edit</button>
                                 </td>

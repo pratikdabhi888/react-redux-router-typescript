@@ -1,7 +1,7 @@
 import * as React from "react"
 import {NavLink, useHistory} from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
-import {createNewProduct, editUser} from "../../../actions/ProductActions";
+import {createNewProduct, editProduct} from "../../../actions/ProductActions";
 import {IRootReducer} from "../../../reducers";
 import {selectProduct} from "../../../actions/ProductActions";
 
@@ -45,7 +45,7 @@ const CreateProduct = () => {
         if (!productReducer.selectedProduct) {
             dispatch(createNewProduct({ id: +new Date(), productName, quantity, price, description }));
         } else {
-            dispatch(editUser({ ...productReducer.selectedProduct, productName, quantity, price, description }));
+            dispatch(editProduct({ ...productReducer.selectedProduct, productName, quantity, price, description }));
         }
         setProductName('');
         setQuantity(0);

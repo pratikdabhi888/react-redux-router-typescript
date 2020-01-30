@@ -33,20 +33,19 @@ const ViewProduct = () => {
     // dispatch selectProduct action
     React.useEffect(() => {
         dispatch(selectProduct(parseInt(productId)))
-    },[dispatch, productId]);
+    },[productId,dispatch]);
 
     // set response data in productDetail state
     React.useEffect(() => {
         if(productReducer.selectedProduct) {
             setProductDetail({
-                ...productDetail,
                 productName:productReducer.selectedProduct.productName,
                 quantity:productReducer.selectedProduct.quantity,
                 price:productReducer.selectedProduct.price,
                 description:productReducer.selectedProduct.description,
             })
         }
-    },[productDetail, productReducer.selectedProduct]);
+    },[productReducer.selectedProduct]);
 
     return (
         <div className="card">

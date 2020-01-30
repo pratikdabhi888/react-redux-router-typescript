@@ -33,7 +33,7 @@ export const deleteProduct= (productId: number): IAction => {
  * Edit product based on productId
  * @param productId
  */
-export const editUser = (productId: IProduct): IAction => {
+export const editProduct = (productId: IProduct): IAction => {
     return {
         type: EDIT_PRODUCT,
         payload: productId
